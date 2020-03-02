@@ -1,483 +1,99 @@
-@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/eWKgbdix", true))()
+local w = library:CreateWindow('Main')
+local plr = game:GetService("Players").LocalPlayer
 
-body, div, span, textarea, ::-webkit-input-placeholder {
-    font-family: 'Livvic', sans-serif;
-}
+w:Section('Main cheats')
 
-:root{
-    --title-gradient:linear-gradient(to right,#37b1da 0,#c948cd 50%,#cce335 100%);
-    --primary-color:#75a00d;
-    --outline-color:#0a0a0a;
-    --outline-lightcolor:#303030;
-    --app-color:#111;
-    --channels-color:#111;
-    --channels-darker:#0c0c0c;
-    --channels-selected:#191919;
-    --channels-text-selected:#9fca2b;
-    --chat-color:#1a1a1a;
-    --mention-color:#1f1f1f;
-    --scrollbar-bg:#2d2d2d;
-    --scrollbar-thumb:#414141;
-    --text-input:#191919;
-    --dropdown-color:#232323;
-    --link-color:#96c83c;
-    --channel-radius:5px;
-    --text-color:#cbcbcb;
-    --text-darker:#b0b0b0;
-    --font:'Livvic',sans-serif;
-    --important-notification-l:#f84747;
-    --important-notification:#d12020;
-}
-a{
-    color:var(--link-color)
-}
-.winButton-iRh8-Z{
-    top:2px!important
-}
-.wordmark-2iDDfm::before{
-    content:"Discord";
-    font-size:14px;
-    z-index:1000;
-    position:fixed;
-    display:inline-block;
-    color:var(--text-color);
-    height:auto;
-    top:12px;
-    left:12px;
-    background-color:transparent
-}
+local valk = w:Button("Get Valk", function()
+   -- gets valk
+   
+   local valkhat = game:GetService("Workspace")["Valkyrie Helm giver"]
+   
+   valkhat.CFrame = plr.Character.HumanoidRootPart.CFrame
+   wait()
+   valkhat.Position = Vector3.new(5629.48, 52.3955, -17259.4)
+   print("Got valk!")
+end)
 
-.wordmark-2iDDfm::after{
-    content:'.cc';
-    font-size:14px;
-    z-index:1000;
-    position:fixed;
-    display:inline-block;
-    color:transparent;
-    height:auto;
-    top:12px;
-    left:55px;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: rainbow 10s ease infinite;
-    -z-animation: rainbow 10s ease infinite;
-    -o-animation: rainbow 10s ease infinite;
-    animation: rainbow 10s ease infinite;}
+local buckethat = w:Button("Get Bucket hat", function()
 
-    @-webkit-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-moz-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-o-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @keyframes rainbow { 
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-}
+function getPart(NAME)
+  for i,v in pairs(workspace:GetDescendants()) do
+    if v.Name == NAME and v.Parent.Name == "Part" then
+      return v.Parent
+    end
+  end
+end
 
-.wordmark-2iDDfm svg{
-    display:none
-}
-.typeWindows-1za-n7{
-    height:25px;
-    background:var(--primary-color);
-    margin-top:1px!important;
-    margin-left:1px;
-    margin-right:1px;
-    background:var(--title-gradient);
-    box-shadow:inset 0 -23px 0 0 var(--app-color),inset 0 -24px 0 0 rgba(0,0,0,0.5);
-    opacity:1.0;
-    z-index:50;
-    border-bottom:1px solid var(--outline-lightcolor)
-}
-.appMount-3lHmkl{
-    left:6px;
-    top:6px;
-    height:calc(100vh - 12px);
-    width:calc(100vw - 12px);
-    box-shadow:0 0 0 1px #3c3c3c,0 0 0 4px #282828,0 0 0 5px #3c3c3c,0 0 0 6px #0a0a0a;
+print("Got bucket!")
 
-}
-#app-mount .app-2rEoOp {
-    background-image: linear-gradient(45deg, rgba(250, 0, 0, 0.1) 100%, rgba(82, 82, 82, 0.735) 1000%), url(http://getwallpapers.com/wallpaper/full/a/7/8/492364.jpg);
-    background-size: cover;
-}
-.container-2lgZY8,
-.theme-dark .layer-3QrUeG,
-.theme-dark .typing-2GQL18,
-.channels-Ie2l6A,
-.theme-dark .wrapper-1Rf91z,
-.theme-dark .scroller-2TZvBN,
-.container-PNkimc,
-.theme-dark .chat-3bRxxu, 
-.theme-dark .chat-3bRxxu form, 
-.theme-dark .content-yTz4x3,
-.theme-dark .messagesWrapper-3lZDfY,
-.messages-3amgkR,
-.scroller-305q3I,
-.sidebar-2K8pFh {
-    background-color: transparent;
-}
+local playerHRP = game.Players.LocalPlayer.Character.HumanoidRootPart
 
-.theme-dark .members-1998pB {
-   background-color: rgba(0, 0, 0, 0.25);
-}
+local part = getPart("Script")
 
-.theme-dark .layers-3iHuyZ {
-    background: rgba(0, 0, 0, 0.42);
-}
+part.CFrame = playerHRP.CFrame
+wait()
+part.Position = Vector3.new(15715.3, 24.0995, -480.2)
+print("Got bucket!")
 
-.bannerImage-1jOskm {
-    opacity: 0.4 !important;
-}
+end)
 
-.theme-dark .container-1r6BKw {
-    background: transparent;
-}
+local unicornhorn = game:GetService("Workspace")["Unicorn Horn"]
 
-.folderIconWrapper-226oVY {
-    border-radius: 15px;
-}
+local unicorn = w:Button("Become a unicorn", function()
+	
+	unicornhorn.Position = plr.Character.HumanoidRootPart.Position
+	wait()
+	unicornhorn.Position = Vector3.new(15708.2, 23.1986, -480)
+	print("Became a unicorn!")
+end)
 
-.theme-dark .expandedFolderBackground-2sPsd-,
-.theme-dark .expandedFolderBackground-2sPsd-.hover-2ji_A7 {
-   border-radius: 13px;
-}
+local babymorph2 = game:GetService("Workspace").Baby
 
-.theme-dark .folder-21wGz3,
-.theme-dark .folder-21wGz3.hover-2ji_A7 {
-    background-color: rgba(0, 0, 0, 0.427);
-}
-::-webkit-scrollbar-thumb{
-    border:none!important;
-    border-radius:0!important;
-    background:#414141!important
-}
-::-webkit-scrollbar{
-    width:6px!important
-}
-::-webkit-scrollbar-track-piece{
-    border:none!important;
-    border-radius:0!important;
-    background:#2d2d2d!important
-}
-.scrollerWrap-1IAIlv .scroller::-webkit-scrollbar-thumb{
-    border:none!important;
-    border-radius:0!important;
-    background:#414141!important
-}
-.scroller-wrap .scroller::-webkit-scrollbar{
-    width:6px!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar-track-piece{
-    border:none!important;
-    border-radius:0!important;
-    background:#2d2d2d!important
-}
-.scrollerWrap-2lJEkd.scroller::-webkit-scrollbar-thumb{
-    border:none!important;
-    border-radius:0!important;
-    background:#414141!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar{
-    width:6px!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar-track-piece{
-    border:none!important;
-    border-radius:0!important;
-    background:#2d2d2d!important
-}
-.wrapper-1Rf91z .scroller-2TZvBN .scroller-2TZvBN+.scroller-2TZvBN{
-    margin-bottom:25px;
-    margin-top:25px
-}
-.homeButton-2Cw51C{
-    border-radius:0!important
-}
-.wrapper-1Rf91z .scroller-2TZvBN .container-1ETFDs+.container-1ETFDs{
-    margin-top:25px
-}
-.wrapper-1Rf91z .scroller-2TZvBN .friendsOnline-2JkivW{
-    padding-bottom:10px;
-    font-size:9px
-}
-.wrapper-1Rf91z .scroller-2TZvBN .container-1ETFDs.selected-nT-gM3:before{
-    box-shadow:0 1px 0 0 #303030,-1px 2px 0 0 #000,0 -1px 0 0 #303030,-1px -2px 0 0 #000;
-    background:var(--channels-color);
-    border-radius:0;
-    height:70px;
-    margin-top:-35px;
-    width:75px;
-    -webkit-transition:none;
-    transition:none
-}
-.wrapper-1Rf91z .scroller-2TZvBN .container-1ETFDs .wrapper-2lTRaf{
-    background:var(--chat-color)!important
-}
-.wrapper-1Rf91z .scroller-2TZvBN .container-1ETFDs.selected-nT-gM3 .wrapper-2lTRaf a{
-    background-color:var(--primary-color)!important;
-    transition:all .3s ease
-}
-.wrapper-1Rf91z .scroller-2TZvBN .container-1ETFDs.selected-nT-gM3 .wrapper-2lTRaf{
-    background-color:var(--primary-color)!important;
-    transition:all .3s ease
-}
-.bd-blue .red-m6f4-H,.tooltip-1OS-Ti.red-m6f4-H{
-    background-color:var(--important-notification)
-}
-.bd-blue .red-m6f4-H.top-1pTh1F:after{
-    border-top-color:var(--important-notification)
-}
-.bd-blue .red-m6f4-H.left-1wV7VO:after{
-    border-left-color:var(--important-notification)
-}
-.bd-blue .red-m6f4-H.bottom-19kp6S:after{
-    border-bottom-color:var(--important-notification)
-}
-.bd-blue .red-m6f4-H.right-KM_vfY:after,.tooltip-1OS-Ti.red-m6f4-H.right-KM_vfY:after{
-    border-right-color:var(--important-notification)
-}
-.scroller-wrap .scroller::-webkit-scrollbar{
-    width:6px!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar-track-piece{
-    border:none!important;
-    border-radius:0!important;
-    background:#2d2d2d!important
-}
-.scrollerWrap-2lJEkd.scroller::-webkit-scrollbar-thumb{
-    border:none!important;
-    border-radius:0!important;
-    background:#414141!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar{
-    width:6px!important
-}
-.scrollerWrap-2lJEkd .scroller::-webkit-scrollbar-track-piece{
-    border:none!important;
-    border-radius:0!important;
-    background:#2d2d2d!important
-}
-.tooltip,.tooltip-1OS-Ti.black-2bmmnj,.tipsy-inner{
-    border-radius:1px!important
-}
-.scroller-2FKFPG.members-1998pB{
-    background:var(--channels-darker)!important;
-    border-left:solid 1px var(--outline-lightcolor);
-    color:red
-}
-.privateChannels-1nO12o .channel-2QD9_O.selected-1HYmZZ a,.privateChannels-1nO12o .channel-2QD9_O a:hover{
-    background: var(--channels-selected);
-    color:var(--text-color)!important;
-    margin-right:10px!important
-}
-.searchBar-6Kv8R2 {
-    box-shadow: none;
-}
+local baby = w:Button("Become baby", function()
+    -- becomes baby 
+    local babymorph = game:GetService("Workspace").Baby["Pickup Infant Button"]
+    local bm = babymorph.CFrame
+    
+    babymorph.CFrame = plr.Character.HumanoidRootPart.CFrame
+    wait()
+    babymorph.Position = Vector3.new(39.6, 2626.6, 13.56)
+    print("Became baby")
+end)
 
-.privateChannels-1nO12o,
-.scroller-1JbKMe,
-.children-19S4PO:after,
-.scroller-zPkAnE {
-    background: none;
-}
-.input-1Rv96N,
-.emptyStateNote-ZYTetQ,
-.contentDefault-16dKSY {
-    color: white;
-}
-.container-2XeR5Z {
-    background-color: rgba(0, 0, 0, 0.17);
-}
+local rebaby = w:Button("Remove Baby", function()
+    babymorph2:Destroy()
+end)
 
-.input-2VB9rf {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.19);
-    color: white;
-    box-shadow: none;
-}
+local vipdoor = game:GetService("Workspace")["VIP Door"]
+	
+local door = w:Button("Remove door", function()
+	vipdoor:Destroy()
+end)
 
-.quickswitcher-3JagVE {
-    box-shadow: none;
-    background-color: rgba(36, 36, 36, 0.865);
-    color: white;
-}
-.inner-zqa7da{
-    border-radius:0!important;
-    background:var(--text-input)!important;
-    box-shadow:inset 0 0 0 1px #323232,inset 0 0 0 2px #101010
-}
-.channelTextArea-rNsIhG .inner-zqa7da .textArea-2Spzkt{
-    font-size:12px;
-    line-height:.80rem;
-    margin:12px 2px 2px 10px;
-    padding:5px 38px 8px 0
-}
-.panels-j1Uci_ {
-    background-color: transparent;
-    border-right:1px solid var(--outline-lightcolor);
-    border-top:1px solid var(--outline-lightcolor);
-    border-left:1px solid var(--outline-lightcolor);
-}
-.wrapper-1Rf91z .scroller-2FKFPG .wrapper-21YSNc .expandedFolderBackground-2sPsd- {
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: unset;
-    height: var(--HSL-size) !important;
-    left: -5px;
-    width: 100%; 
-}
-.theme-dark .contentRegion-3nDuYy,
-.contentRegionScroller-26nc1e,
-.theme-dark .sidebarRegion-VFTUkN,
-.sidebarRegionScroller-3MXcoP,
-.standardSidebarView-3F1I7i {
-    background: transparent;
-}
-.theme-dark .closeButton-1tv5uR {
-    border-color:#1f1f1f;
-    border-radius: 0
-}
+w:Section('Misc.')
 
-.theme-dark .closeButton-1tv5uR:hover {
-    background-color: #303030;
-}
-.homeIcon-tEMBK1 {
-	background-color: #fff!important;
-	-webkit-mask: url(data:image/png;base64,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);
-	-webkit-mask-size: 28px;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	margin: 0;
-	height: 100%;
-	width: 100%
-}
-.userPopout-3XzG_A {
-    border:1px solid var(--outline-color);
-    box-shadow: 0 0 0 1px #323232,0 0 0 2px #0a0a0a!important;
-}
-.quickMessage-2XpSaN{
-    border-radius:0!important;
-    background:var(--text-input)!important;
-    border:0;
-    box-shadow:inset 0 0 0 1px #323232,inset 0 0 0 2px #101010;
-    font-size:11px
-}
-.userInfoViewing-16kqK3{
-    border:1px solid var(--outline-lightcolor);
-}
-.userSettingsAccount-2eMFVR div:nth-child(2)>div:nth-child(2)>.viewBody-2Qz-jg:hover {
-	filter: blur(0)
-}
-.userSettingsAccount-2eMFVR div:nth-child(2)>div:nth-child(2)>.viewBody-2Qz-jg {
-	filter: blur(5px);
-    transition: 250ms filter ease-in-out;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+local box = w:Box('WalkSpeed', {
+   flag = "ws";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(new)
+end)
 
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;}
+local box = w:Box('Jump power', {
+   flag = "jp";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(new)
+end)
 
-    @-webkit-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-moz-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @-o-keyframes rainbow {
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-    }
-    @keyframes rainbow { 
-        0%{background-position:0% 82%}
-        50%{background-position:100% 19%}
-        100%{background-position:0% 82%}
-}
-#app-mount .container-3gCOGc {
-    background: var(--lv1);
-}
-.container-1r6BKw{
-    border:1px solid var(--outline-lightcolor);
-}
-.container-3gCOGc .children-19S4PO .iconWrapper-2OrFZ1,
-.container-3gCOGc .title-29uC1r,
-.divider-3FBTu8 {
-	display: none
-}
-#app-mount .friendsTable-133bsv .status-3fQvEa,
-.friendsTable-133bsv .friendsRow-2yicud,
-.friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9 {
-	border-radius: 0!important
-}
-.friendsTable-133bsv .friendsRow-2yicud {
-	border:1px solid var(--outline-lightcolor)!important
-}
-.activityFeed-1C0EmJ,
-.theme-dark .root-1BQpZw,
-.scroller-5bBood,
-.gameLibrary-TTDw4Y,
-.scroller-1IIF0A,
-.applicationStore-1pNvnv,
-.scroller-9moviB,
-.theme-dark .container-3gCOGc,
-.friendsTable-133bsv .friendsTableBody-1ZhKif {
-    background-color: transparent;
-}
-.theme-dark .embedTitleLink-1Zla9e {
-    color:var(--link-color)!important;
-}
-  .standardSidebarView-3F1I7i a,
-  .theme-dark .card-3Qj_Yx a,
-  .bda-slist .bda-footer a,
-  .content-8biNdB a,
-  .footer-3rDWdC a,
-  .lookLink-9FtZy-.colorLink-35jkBc,
-  .theme-dark .markup-2BOw-j a,
-  .quickswitcher-3JagVE a,
-  .theme-dark .topic-TCb_qw a,
-  .filenameLinkWrapper-1-14c5 a,
-  .operations-36ENbA>a,
-  .theme-dark .welcomeMessage-3_Mcht a,
-  .localBotMessage-1cGMdw a,
-  .theme-dark .container-3-pyIM .content-2M3n_H a,
-  .helpText-h3r3wC a,
-  .lookLink-9FtZy-.colorBrand-3pXr91,
-  .emptyStateSubtext-2njjqg a,
-  .theme-dark .container-2x5lvQ section a {
-    color:var(--link-color)!important;
-}
-.uploadModal-2ifh8j {
-    background-color: #111!important;
-    border:1px solid var(--outline-lightcolor)!important;
-}
-.uploadModal-2ifh8j .icon-kyxXVr {
-    border:1px solid var(--outline-lightcolor)!important;
-}
-.uploadModal-2ifh8j .footer-3mqk7D {
-    background-color: transparent;
-    padding: 13px;
-}
-.uploadModal-2ifh8j .hasSpoilers-1IRtQC .lookFilled-1Gx00P {
-    background:var(--primary-color);
-}
+w:Bind("Reset Character", {
+   flag = "killbind";
+   kbonly = true;
+   default = Enum.KeyCode.End;
+}, function()
+   plr.Character:BreakJoints()
+end)
+
